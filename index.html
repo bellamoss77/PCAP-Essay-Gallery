@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>ScrollTrigger Playground</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/efa7ivj.css">
+    <script src="https://kit.fontawesome.com/8f1f53b08b.js" crossorigin="anonymous"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="https://www.pvcc.edu/programs/divisions/humanities" class="pvcc-link">
+                <img class="pvcc" alt="PVCC ARTS logo" src="logos/PVCC_ARTS_Logo.png">
+            </a>
+            <a href="https://virginiahumanities.org/" class="vahum-link">
+                <img class="vahum" src="logos/VAHumanities_White.png" alt="Virginia Humanities logo">
+            </a>                
+        </div>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">Performance</a>
+        </div>
+    </header>
+    <div class="gallery-info">
+        <div class="gallery-title">
+            <h1>Written Works</h1>
+        </div>
+        <div class="gallery-description">
+            <h2>"The Prison Creative Arts Project gives direct access to the writing of PVCC students who are completing an associate degree in General Studies while at the same time being incarcerated in Virginia’s prisons. Our perspective on the lives, experiences, and backgrounds of the incarcerated traditionally has been informed and shaped, more or less exclusively, by information derived from popular culture—from TV and movies. However, the essays, poems, stories, and other writing made available here - written in PVCC college classes by students incarcerated in the Fluvanna Correctional Center for Women, the Buckingham Correctional Center, or the Dillwyn Correctional Center - gives us unfiltered, first-hand access to the truth about these people’s - these students’ - unique lives, people who otherwise have been hidden from view, out of sight and out of mind. We thank Virginia Humanities for the grant that has made it possible to present this writing to the general public."</h2>
+        </div>
+        <div class="quote-attribution">
+            <h5>-Ben Sloan, Project Coordinator & Writing Instructor</h5>
+        </div>
+    <span class="divider-line"></span>
+    <div id="image-gallery">
+        <div class="gallery-img left-slide-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/Education-Transcendence.pdf">
+            <img src="previewImages/Education-Transcendence.png" alt="Illustration of stack of books" width="350" height="350">
+            <h3 class="caption">Educational Transcendence</h3>
+        </div>
+        <div class="gallery-img fade-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/Glasses-in-the-Air.pdf">
+            <img src="previewImages/Glasses-in-the-Air.png" alt="clinking champaign flutes illustration" width="350" height="350">
+            <h3 class="caption">Glasses in the Air to My Fashion and Hair</h3>
+        </div>
+        <div class="gallery-img right-slide-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/Life-and-Learning-to-Survive.pdf">
+            <img src="previewImages/Life-and-Learning.png" alt="illustration of a tree"  width="350" height="350">
+            <h3 class="caption">Life and Learning to Survive</h3>
+        </div>
+        <div class="gallery-img left-slide-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/Man-Behind-the-Mustache.pdf">
+            <img src="previewImages/Man-Behind-the-Mustache.png" alt="Mustachioed silhouette" width="350" height="350">
+            <h3 class="caption">The Man Behind the Mustache</h3>
+        </div>
+        <div class="gallery-img fade-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/A-Moment-In-My-Arms.pdf">
+            <img src="previewImages/Moment-In-My-Arms.png" alt="Silhouette of a baby" width="350" height="350">
+            <h3 class="caption">A Moment in my Arms, Forever in my Heart</h3>
+        </div>
+        <div class="gallery-img right-slide-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/The-Arrival.pdf">
+            <img src="previewImages/The-Arrival.png" alt="illustration of handcuffs" width="350" height="350">
+            <h3 class="caption">The Arrival</h3>
+        </div>
+        <div class="gallery-img fade-in" data-pdf="https://raw.githubusercontent.com/bellamoss77/scrollTriggerContentPlayground/main/PDFs/Reason-to-Change.pdf">
+            <img src="previewImages/Reason-to-Change.png" alt="Illustration of a hand cupping a seedling"  width="350" height="350">
+            <h3 class="caption">Reason to Change</h3>
+        </div>
+    </div>
+    <div id="lightbox" class="lightbox" tabindex="-1">
+        <div class="lightbox-content">
+            <span id="next" class="arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </span>
+            <span id="prev" class="arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+            </span>
+            <span id="close">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </span>
+            <div id="pdf-render-container"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="code.js"></script>
+
+</body>
+</html>
